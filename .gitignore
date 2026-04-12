@@ -1,0 +1,10 @@
+# Ignore dependencies
+/vendor/
+
+# Ignore environment and secret files
+/.env
+/client_secret_*.json
+
+# Ignore OS/system files
+Thumbs.db
+.DS_Store
