@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #f6cdeb;">
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <a href="logout.php" class="btn">Logout</a>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <h2>Consultation Requests</h2>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Symptoms</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="consultationData">
+                <!-- Data will be loaded from PHP -->
+            </tbody>
+        </table>
+    </main>
+
+    <script>
+        fetch('admin_dashboard.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('consultationData').innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* General Body Styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: white;
+    color: #007BFF;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Hero Section (Homepage Background) */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #007BFF, #00C6FF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    color: #007BFF;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f1f1f1;
+}
+
+/* About Page Styling */
+body {
+    background: linear-gradient(to right, #007BFF, #00C6FF);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Ensures all text inside is centered */
+}
+
+/* Center text for all sections inside about-container */
+.about-section {
+    text-align: center;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    text-align: center;
+}
+
+/* Remove bullets but keep the ✔ tick marks */
+.no-bullets {
+    list-style-type: none; /* Removes default bullets */
+    padding-left: 0;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the list items */
+    justify-content: center;
+}
+
+/* Ensure each list item is centered properly */
+.no-bullets li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns tick mark and text correctly */
+    font-weight: bold;
+    color: #007BFF;
+    margin: 10px 0;
+    width: 100%; /* Ensures consistency */
+    max-width: 300px; /* Prevents stretching */
+    padding-left: 50px;
+}
+
+/* Add a single ✔ tick mark before each list item */
+.no-bullets li::before {
+    content: "✔";
+    font-size: 20px;
+    color: #28a745; /* Green tick */
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+
+/* Contact Page Styling */
+.contact-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Forms (Signup, Login, Symptoms) */
+.form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Center the entire dashboard content */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensure it takes full viewport height */
+    text-align: center;
+    width: 100%;
+}
+
+.dashboard-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Ensure the button container is centered */
+.dashboard-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Style the buttons */
+.dashboard-buttons .btn {
+    display: inline-block;
+    width: 250px; /* Fixed width for better alignment */
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.dashboard-buttons .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Center the consultation status page */
+.status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensures it takes full screen height */
+    text-align: center;
+}
+
+/* Style the table to be centered */
+.status-table {
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.status-table th, .status-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.status-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Admin Dashboard Container */
+header {
+    background: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.admin-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Styled Table */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.styled-table th, .styled-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.styled-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.styled-table tr:hover {
+    background-color: #ddd;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: ;
+}
+
+/* Center Content */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+
+
+

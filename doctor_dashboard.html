@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Doctor Dashboard</h1>
+        <nav>
+            <a href="logout.php">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Approved Patient Consultations</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Symptoms</th>
+                    <th>Schedule Appointment</th>
+                </tr>
+            </thead>
+            <tbody id="patients-table">
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+    </main>
+
+    <script>
+        fetch('doctor_dashboard.php')
+            .then(response => response.json())
+            .then(data => {
+                let tableBody = document.getElementById("patients-table");
+                tableBody.innerHTML = "";
+
+                data.forEach(row => {
+                    let tr = document.createElement("tr");
+                    tr.innerHTML = `
+                        <td>${row.patient_name}</td>
+                        <td>${row.age}</td>
+                        <td>${row.gender}</td>
+                        <td>${row.symptoms}</td>
+                        <td><a href="schedule_appointment.php?consultation_id=${row.consultation_id}">Schedule</a></td>
+                    `;
+                    tableBody.appendChild(tr);
+                });
+            })
+            .catch(error => console.error('Error fetching consultations:', error));
+    </script>
+</body>
+</html>
